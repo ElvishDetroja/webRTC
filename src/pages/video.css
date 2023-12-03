@@ -1,0 +1,15 @@
+.show-live-video-container {
+    width: 600px;
+}
+
+.show-live-video-container video {
+    width: 100%;
+}
+
+.show-recorded-video-container {
+    width: 600px;
+}
+
+.show-recorded-video-container video {
+    width: 100%;
+}

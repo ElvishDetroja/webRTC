@@ -1,15 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import Video from "./pages/video";
 
 function App() {
   return (
     <>
       <Routes>
-        {/* <Route element={<AdminRoute />}>
-          <Route path="/admin/products" element={<AdminProducts />} />
-          <Route path="/admin/product/add" element={<AdminProductAdd />} />
-          <Route path="/admin/product/:id" element={<AdminProductEdit />} />
-        </Route> */}
+        <Route path="/video" element={<Video />} />
       </Routes>
     </>
   );
