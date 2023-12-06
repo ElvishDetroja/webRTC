@@ -1,7 +1,97 @@
+.video-container {
+    width: 100%;
+}
+
+.video-container.live-show .live-video-container {
+    display: block;
+}
+
+.video-container.live-show .recorded-video-container {
+    display: none;
+}
+
+.video-container.recorded-show .live-video-container {
+    display: none;
+}
+
+.video-container.recorded-show .recorded-video-container {
+    display: block;
+}
+
+
+
+
+
+
+
 .video-container video {
     transform: scale(-1, 1);
+    width: 100%;
+    background-color: black;
 }
 
 .video-container video::-webkit-media-controls-panel {
     transform: scale(-1, 1);
 }
+
+
+
+
+
+
+
+
+.live-video-container,
+.recorded-video-container {
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+.live-video-container .record-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: red;
+    border: 4px solid white;
+    border-radius: 50%;
+    z-index: 1;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.live-video-container .record-button.active {
+    outline: 1px solid red;
+}
+
+.live-video-container .record-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+.record-indicator.active {
+    opacity: 1;
+}
+
+.live-video-container .record-indicator .circle {
+    width: 13px;
+    height: 13px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.live-video-container .record-indicator .record-timer {}
